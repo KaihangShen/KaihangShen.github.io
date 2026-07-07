@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div id="main" role="main">
+  {% if page.author_profile %}
+    {% include sidebar.html %}
+  {% endif %}
+
+  <article class="page cv-page">
+    <div class="page__inner-wrap">
+      <header class="cv-page__header">
+        <h1 class="page__title">{{ page.title }}</h1>
+      </header>
+
+      <section class="page__content cv-page__content">
+        <div class="jemdoc-cv">
+          {{ content }}
+        </div>
+      </section>
+    </div>
+  </article>
+</div>

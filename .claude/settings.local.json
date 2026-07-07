@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh repo *)",
+      "Bash(git show-ref *)",
+      "WebFetch(domain:github.com)",
+      "Bash(git ls-remote *)",
+      "Bash(git fetch *)",
+      "WebSearch",
+      "Bash(curl -s \"https://api.github.com/repos/KaihangShen/KaihangShen.github.io/contributors\")",
+      "Bash(curl *)",
+      "Bash(python3 -c \"import sys,json; data=json.load\\(sys.stdin\\); print\\(f'Total commits on GitHub: {len\\(data\\) if isinstance\\(data,list\\) else data}'\\)\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(f'Contributors: {len\\(d\\)}'\\); [print\\(f'  {c[\\\\\"login\\\\\"]}: {c[\\\\\"contributions\\\\\"]}'\\) for c in d[:10]]\")",
+      "Bash(git checkout *)",
+      "Bash(git add *)"
+    ]
+  }
+}

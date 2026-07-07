@@ -1,0 +1,92 @@
+/*
+ * CV typography and components derived from:
+ * https://github.com/szl2/jemdoc-new-design
+ */
+
+.jemdoc-cv {
+  width: 100%;
+  min-width: 0;
+  color: #24292e;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans",
+    "Helvetica Neue", Arial, sans-serif;
+
+  @import "vendor/jemdoc-new-design";
+}
+
+/* Keep the normal Academic Pages title style. */
+.cv-page__header {
+  margin-bottom: 0;
+}
+
+.cv-page__header .page__title {
+  margin-top: 0;
+}
+
+/* Adapt jemdoc's image-and-text block to the existing right column. */
+.jemdoc-cv #text-img-container {
+  display: flex !important;
+  align-items: flex-start;
+  gap: 18px;
+  overflow: visible !important;
+  margin: 0 0 2rem !important;
+  padding: 0 !important;
+}
+
+.jemdoc-cv #img-container {
+  float: none !important;
+  flex: 0 0 86px;
+  width: 86px;
+  padding: 0 !important;
+}
+
+.jemdoc-cv #img-container img {
+  display: block;
+  width: 56px;
+  height: auto;
+  margin: 0 !important;
+}
+
+.jemdoc-cv #text-container {
+  flex: 1 1 0;
+  min-width: 0;
+  overflow: visible !important;
+  padding: 0 !important;
+}
+
+/* Prevent the university heading from being pushed upward or clipped. */
+.jemdoc-cv #text-container > h3:first-child {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.25 !important;
+}
+
+.jemdoc-cv #text-container > h3:first-child + p {
+  margin-top: 0.3rem !important;
+}
+
+.jemdoc-cv .cv-entry {
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 700px) {
+  .jemdoc-cv #text-img-container {
+    gap: 12px;
+  }
+
+  .jemdoc-cv #img-container {
+    flex-basis: 68px;
+    width: 68px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .jemdoc-cv #text-img-container {
+    display: block !important;
+  }
+
+  .jemdoc-cv #img-container {
+    width: auto;
+    margin-bottom: 12px;
+  }
+}
